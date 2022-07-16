@@ -69,6 +69,8 @@ GEM
     addressable (2.8.0)
       public_suffix (>= 2.0.2, < 5.0)
     bindex (0.8.1)
+    bing_translator (6.2.0)
+      json
     bootsnap (1.12.0)
       msgpack (~> 1.2)
     builder (3.2.4)
@@ -103,6 +105,7 @@ GEM
     jbuilder (2.11.5)
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
+    json (2.6.2)
     loofah (2.18.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -228,6 +231,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  bing_translator (~> 6.2.0)
   bootsnap (= 1.12.0)
   capybara (= 3.37.1)
   debug (= 1.5.0)

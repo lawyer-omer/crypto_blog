@@ -12,6 +12,8 @@ gem "stimulus-rails",  "1.0.4"
 gem "jbuilder",        "2.11.5"
 gem "puma",            "5.6.4"
 gem "bootsnap",        "1.12.0", require: false
+gem "bing_translator", "~> 6.2.0"
+
 
 group :development, :test do
   gem "sqlite3", "1.4.2"

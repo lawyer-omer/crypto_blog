@@ -1,0 +1,40 @@
+<% translator = BingTranslator.new('35d5e5bfee1b4f6284e48456c8af0719') %>
+<% spanish_html = translator.translate('<b>Hello</b>', to: 'es', textType: 'html') %>
+
+
+<!-- Page Header-->
+<header class="masthead" style="background-image: url('assets/img/home-bg.jpg')">
+    <div class="container position-relative px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <div class="site-heading">
+                    <h1><%= spanish_html %></h1>
+                    <span class="subheading">A Blog Theme by Start Bootstrap</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- Main Content-->
+<div class="container px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+        <div class="col-md-10 col-lg-8 col-xl-7">
+            <!-- Post preview-->
+            <% for x in @news["Data"]%>
+            <div class="post-preview">
+                <a href="<%= x["url"]%>">
+                    <h2 class="post-title"><%= x["title"]%></h2>
+                    <img src="<%= x["source_info"]["img"]%>" class="img-fluid">
+                    <h3 class="post-subtitle"><%= x["body"]%></h3>
+                </a>
+                <p class="post-meta">
+                    Posted by
+                    <a href="<%= x["url"]%>"><%= x["source_info"]["name"]%></a>
+                </p>
+            </div>
+            <% end %>
+            <!-- Divider-->
+            <hr class="my-4" />
+        </div>
+    </div>
+</div>
